@@ -7,7 +7,7 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
 
--- Instances: 42 | Scripts: 6 | Modules: 0 | Tags: 0
+-- Instances: 43 | Scripts: 7 | Modules: 0 | Tags: 0
 local G2L = {};
 
 -- StarterGui.ScreenGui
@@ -360,6 +360,11 @@ G2L["2a"]["Text"] = [[by OutMoon and DreamyDolan2]];
 G2L["2a"]["Position"] = UDim2.new(0.04889, 0, 0.89003, 0);
 
 
+-- StarterGui.ScreenGui.Frame.LocalScript
+G2L["2b"] = Instance.new("LocalScript", G2L["2"]);
+
+
+
 -- StarterGui.ScreenGui.Frame.UIDrag
 local function C_3()
 local script = G2L["3"];
@@ -562,5 +567,93 @@ local script = G2L["25"];
 	end
 end;
 task.spawn(C_25);
+-- StarterGui.ScreenGui.Frame.LocalScript
+local function C_2b()
+local script = G2L["2b"];
+	local Example = script.Parent.ScrollingFrame:FindFirstChild("Example")
+	local Searchbtn = script.Parent:FindFirstChild("ImageButton")
+	local search = script.Parent:FindFirstChild("TextBox")
+	
+	local HttpService = game:GetService("HttpService")
+	
+	-- Make sure the Example template is invisible by default
+	if Example then
+		Example.Visible = false
+	end
+	
+	local function clearResults()
+		local scrollingFrame = script.Parent.ScrollingFrame
+		local children = scrollingFrame:GetChildren()
+		for i = #children, 1, -1 do
+			local child = children[i]
+			if child.Name == "Example" and child ~= Example then
+				child:Destroy()
+			end
+		end
+	end
+	
+	local function SearchScripts(txt)
+		clearResults()
+		local ok, response = pcall(function()
+			return game:HttpGet("https://scriptblox.com/api/script/search?q="..txt.."&page=1&max=1000")
+		end)
+		if not ok then return end
+	
+		local data = HttpService:JSONDecode(response)
+		if not data.result or not data.result.scripts or #data.result.scripts == 0 then
+			-- Show "No results found" message
+			if Example then
+				local noResult = Example:Clone()
+				noResult.Parent = script.Parent.ScrollingFrame
+				noResult.Visible = true
+				if noResult:FindFirstChild("TextLabel") then
+					noResult.TextLabel.Text = "No results found."
+				end
+				if noResult:FindFirstChild("TextButton") then
+					noResult.TextButton.Visible = false
+				end
+				noResult.Size = UDim2.new(1,-10,0,40)
+			end
+			return
+		end
+	
+		for i = 1, #data.result.scripts do
+			local info = data.result.scripts[i]
+			if Example then
+				local holder = Example:Clone()
+				holder.Parent = script.Parent.ScrollingFrame
+				holder.Visible = true
+				holder.Size = UDim2.new(1,-10,0,40)
+				if holder:FindFirstChild("TextLabel") then
+					holder.TextLabel.Text = info.title or "No Title"
+				end
+				if holder:FindFirstChild("TextButton") then
+					holder.TextButton.Visible = true
+					holder.TextButton.MouseButton1Click:Connect(function()
+						pcall(function()
+							loadstring(info.script)()
+						end)
+					end)
+				end
+				if holder:FindFirstChild("ImageLabel") then
+					if info.icon and tostring(info.icon) ~= "" then
+						holder.ImageLabel.Image = "rbxassetid://"..tostring(info.icon)
+					else
+						holder.ImageLabel.Image = "rbxassetid://104649966280536"
+					end
+				end
+			end
+		end
+	end
+	
+	if Searchbtn then
+		Searchbtn.MouseButton1Click:Connect(function()
+			if search and search.Text ~= "" then
+				SearchScripts(search.Text)
+			end
+		end)
+	end
+end;
+task.spawn(C_2b);
 
 return G2L["1"], require;
