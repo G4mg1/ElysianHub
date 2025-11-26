@@ -90,7 +90,7 @@ G2L["b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["b"]["BackgroundTransparency"] = 1;
 G2L["b"]["Size"] = UDim2.new(0, 450, 0, 33);
 G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["b"]["Text"] = [[ElysianHub]];
+G2L["b"]["Text"] = [[ElysianHub v2]];
 G2L["b"]["Position"] = UDim2.new(-0, 0, 0, 0);
 
 
