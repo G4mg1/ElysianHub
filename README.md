@@ -7,14 +7,13 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
 ]=]
 
--- Instances: 53 | Scripts: 9 | Modules: 0 | Tags: 0
-local G2L = {};
+-- Instances: 66 | Scripts: 9 | Modules: 0 | Tags: 0
+local G2L = {};\
 
 -- StarterGui.ScreenGui
 G2L["1"] = Instance.new("ScreenGui", game.CoreGui);
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
-G2L["1"]["ResetOnSpawn"] = false;
-
+G2L["1"]["ResetOnSpawn"] = false
 
 -- StarterGui.ScreenGui.SuperDuber
 G2L["2"] = Instance.new("Frame", G2L["1"]);
@@ -37,441 +36,607 @@ G2L["4"] = Instance.new("LocalScript", G2L["2"]);
 
 
 
--- StarterGui.ScreenGui.SuperDuber.TextBox
-G2L["5"] = Instance.new("TextBox", G2L["2"]);
-G2L["5"]["CursorPosition"] = -1;
-G2L["5"]["ZIndex"] = 2;
-G2L["5"]["BorderSizePixel"] = 0;
-G2L["5"]["TextSize"] = 14;
-G2L["5"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["5"]["BackgroundColor3"] = Color3.fromRGB(30, 30, 30);
-G2L["5"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["5"]["Size"] = UDim2.new(0, 357, 0, 35);
-G2L["5"]["Position"] = UDim2.new(0.04889, 0, 0.14089, 0);
-G2L["5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5"]["Text"] = [[]];
-G2L["5"]["BackgroundTransparency"] = 0.55;
-
-
--- StarterGui.ScreenGui.SuperDuber.TextBox.UICorner
-G2L["6"] = Instance.new("UICorner", G2L["5"]);
-G2L["6"]["CornerRadius"] = UDim.new(0, 25);
-
-
--- StarterGui.ScreenGui.SuperDuber.TextBox.UIStroke
-G2L["7"] = Instance.new("UIStroke", G2L["5"]);
-G2L["7"]["Transparency"] = 0.38;
-G2L["7"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-G2L["7"]["Thickness"] = 1.8;
-G2L["7"]["Color"] = Color3.fromRGB(158, 158, 158);
-
-
--- StarterGui.ScreenGui.SuperDuber.TextBox.UIStroke.UIGradient
-G2L["8"] = Instance.new("UIGradient", G2L["7"]);
-G2L["8"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 0),NumberSequenceKeypoint.new(0.501, 1),NumberSequenceKeypoint.new(1.000, 0)};
-
-
--- StarterGui.ScreenGui.SuperDuber.TextBox.UIStroke.UIGradient.LocalScript
-G2L["9"] = Instance.new("LocalScript", G2L["8"]);
-
-
-
--- StarterGui.ScreenGui.SuperDuber.TextLabel
-G2L["a"] = Instance.new("TextLabel", G2L["2"]);
-G2L["a"]["ZIndex"] = 2;
-G2L["a"]["BorderSizePixel"] = 0;
-G2L["a"]["TextSize"] = 26;
-G2L["a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["a"]["BackgroundTransparency"] = 1;
-G2L["a"]["Size"] = UDim2.new(0, 450, 0, 33);
-G2L["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["a"]["Text"] = [[ElysianHub]];
-G2L["a"]["Position"] = UDim2.new(-0, 0, 0, 0);
-
-
--- StarterGui.ScreenGui.SuperDuber.ImageButton
-G2L["b"] = Instance.new("ImageButton", G2L["2"]);
-G2L["b"]["BorderSizePixel"] = 0;
-G2L["b"]["BackgroundTransparency"] = 1;
--- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["b"]["BackgroundColor3"] = Color3.fromRGB(30, 30, 30);
-G2L["b"]["ZIndex"] = 2;
-G2L["b"]["Image"] = [[rbxassetid://15985408996]];
-G2L["b"]["Size"] = UDim2.new(0, 34, 0, 44);
-G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["b"]["Rotation"] = 135;
-G2L["b"]["Position"] = UDim2.new(0.87556, 0, 0.14433, 0);
-
-
--- StarterGui.ScreenGui.SuperDuber.ImageButton.UIAspectRatioConstraint
-G2L["c"] = Instance.new("UIAspectRatioConstraint", G2L["b"]);
-
-
-
--- StarterGui.ScreenGui.SuperDuber.ScrollingFrame
-G2L["d"] = Instance.new("ScrollingFrame", G2L["2"]);
-G2L["d"]["Active"] = true;
-G2L["d"]["ZIndex"] = 2;
-G2L["d"]["BorderSizePixel"] = 0;
-G2L["d"]["CanvasSize"] = UDim2.new(0, 0, 10, 0);
-G2L["d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["d"]["Size"] = UDim2.new(0, 406, 0, 160);
-G2L["d"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["d"]["Position"] = UDim2.new(0.04889, 0, 0.32646, 0);
-G2L["d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["d"]["BackgroundTransparency"] = 1;
-
-
--- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.UICorner
-G2L["e"] = Instance.new("UICorner", G2L["d"]);
-G2L["e"]["CornerRadius"] = UDim.new(0, 25);
-
-
--- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.UIGridLayout
-G2L["f"] = Instance.new("UIGridLayout", G2L["d"]);
-G2L["f"]["CellSize"] = UDim2.new(0, 392, 0, 86);
-G2L["f"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
-G2L["f"]["CellPadding"] = UDim2.new(0, 5, 0, 10);
-
-
--- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example
-G2L["10"] = Instance.new("Frame", G2L["d"]);
-G2L["10"]["ZIndex"] = 2;
-G2L["10"]["BorderSizePixel"] = 0;
-G2L["10"]["BackgroundColor3"] = Color3.fromRGB(91, 91, 91);
-G2L["10"]["Size"] = UDim2.new(0, 392, 0, 86);
-G2L["10"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["10"]["Name"] = [[Example]];
-G2L["10"]["BackgroundTransparency"] = 0.45;
-
-
--- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.TextLabel
-G2L["11"] = Instance.new("TextLabel", G2L["10"]);
-G2L["11"]["TextWrapped"] = true;
-G2L["11"]["ZIndex"] = 2;
-G2L["11"]["BorderSizePixel"] = 0;
-G2L["11"]["TextSize"] = 20;
-G2L["11"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["11"]["TextScaled"] = true;
-G2L["11"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["11"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["11"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["11"]["BackgroundTransparency"] = 1;
-G2L["11"]["Size"] = UDim2.new(-0.05745, 210, 0.07705, 30);
-G2L["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["11"]["Text"] = [[Example name]];
-G2L["11"]["Position"] = UDim2.new(0.11949, 0, 0.11527, 0);
-
-
--- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.ImageLabel
-G2L["12"] = Instance.new("ImageLabel", G2L["10"]);
-G2L["12"]["ZIndex"] = 2;
-G2L["12"]["BorderSizePixel"] = 0;
-G2L["12"]["BackgroundColor3"] = Color3.fromRGB(27, 27, 27);
--- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["12"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["12"]["Image"] = [[rbxassetid://104649966280536]];
-G2L["12"]["Size"] = UDim2.new(0, 41, 0, 35);
-G2L["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["12"]["BackgroundTransparency"] = 1;
-G2L["12"]["Position"] = UDim2.new(0.06, 0, 0.5, 0);
-
-
--- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.ImageLabel.UICorner
-G2L["13"] = Instance.new("UICorner", G2L["12"]);
-G2L["13"]["CornerRadius"] = UDim.new(0, 25);
-
-
--- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.ImageLabel.UIAspectRatioConstraint
-G2L["14"] = Instance.new("UIAspectRatioConstraint", G2L["12"]);
-
-
-
--- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.UICorner
-G2L["15"] = Instance.new("UICorner", G2L["10"]);
-G2L["15"]["CornerRadius"] = UDim.new(0, 25);
-
-
--- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.TextButton
-G2L["16"] = Instance.new("TextButton", G2L["10"]);
-G2L["16"]["BorderSizePixel"] = 0;
-G2L["16"]["TextSize"] = 14;
-G2L["16"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["16"]["BackgroundColor3"] = Color3.fromRGB(67, 67, 67);
-G2L["16"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["16"]["ZIndex"] = 2;
-G2L["16"]["Size"] = UDim2.new(0, 87, 0, 29);
-G2L["16"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["16"]["Text"] = [[Run]];
-G2L["16"]["Position"] = UDim2.new(0.75655, 0, 0.15121, 0);
-
-
--- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.TextButton.UICorner
-G2L["17"] = Instance.new("UICorner", G2L["16"]);
-G2L["17"]["CornerRadius"] = UDim.new(0, 25);
-
-
--- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.View
-G2L["18"] = Instance.new("ImageLabel", G2L["10"]);
-G2L["18"]["BorderSizePixel"] = 0;
-G2L["18"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
--- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["18"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["18"]["Image"] = [[rbxassetid://104741126012073]];
-G2L["18"]["Size"] = UDim2.new(0, 34, 0, 26);
-G2L["18"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["18"]["BackgroundTransparency"] = 1;
-G2L["18"]["Name"] = [[View]];
-G2L["18"]["Position"] = UDim2.new(0.15, 0, 0.76, 0);
-
-
--- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.View.UIAspectRatioConstraint
-G2L["19"] = Instance.new("UIAspectRatioConstraint", G2L["18"]);
-
-
-
--- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.View.TextLabel
-G2L["1a"] = Instance.new("TextLabel", G2L["18"]);
-G2L["1a"]["TextWrapped"] = true;
-G2L["1a"]["ZIndex"] = 2;
-G2L["1a"]["BorderSizePixel"] = 0;
-G2L["1a"]["TextSize"] = 20;
-G2L["1a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["1a"]["TextScaled"] = true;
-G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["1a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["1a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["1a"]["BackgroundTransparency"] = 1;
-G2L["1a"]["Size"] = UDim2.new(-2.74976, 210, -0.53833, 30);
-G2L["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1a"]["Text"] = [[1million]];
-G2L["1a"]["Position"] = UDim2.new(1.23488, 0, 0.19219, 0);
-
-
--- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.Copy
-G2L["1b"] = Instance.new("ImageLabel", G2L["10"]);
-G2L["1b"]["BorderSizePixel"] = 0;
-G2L["1b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
--- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["1b"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["1b"]["Image"] = [[rbxassetid://86138545569367]];
-G2L["1b"]["Size"] = UDim2.new(0, 34, 0, 26);
-G2L["1b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1b"]["BackgroundTransparency"] = 1;
-G2L["1b"]["Name"] = [[Copy]];
-G2L["1b"]["Position"] = UDim2.new(0.39, 0, 0.76, 0);
-
-
--- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.Copy.UIAspectRatioConstraint
-G2L["1c"] = Instance.new("UIAspectRatioConstraint", G2L["1b"]);
-
-
-
--- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.Copy.TextLabel
-G2L["1d"] = Instance.new("TextLabel", G2L["1b"]);
-G2L["1d"]["TextWrapped"] = true;
-G2L["1d"]["ZIndex"] = 2;
-G2L["1d"]["BorderSizePixel"] = 0;
-G2L["1d"]["TextSize"] = 20;
-G2L["1d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["1d"]["TextScaled"] = true;
-G2L["1d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["1d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["1d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["1d"]["BackgroundTransparency"] = 1;
-G2L["1d"]["Size"] = UDim2.new(-2.74976, 210, -0.53833, 30);
-G2L["1d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1d"]["Text"] = [[ClickToCopy]];
-G2L["1d"]["Position"] = UDim2.new(1.23488, 0, 0.19219, 0);
-
-
--- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.Copy.TextButton
-G2L["1e"] = Instance.new("TextButton", G2L["1b"]);
-G2L["1e"]["BorderSizePixel"] = 0;
-G2L["1e"]["TextTransparency"] = 1;
-G2L["1e"]["TextSize"] = 14;
-G2L["1e"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["1e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["1e"]["BackgroundTransparency"] = 1;
-G2L["1e"]["Size"] = UDim2.new(0, 76, 0, 21);
-G2L["1e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1e"]["Position"] = UDim2.new(-0, 0, 0, 0);
-
-
--- StarterGui.ScreenGui.SuperDuber.UICorner
-G2L["1f"] = Instance.new("UICorner", G2L["2"]);
-G2L["1f"]["CornerRadius"] = UDim.new(0, 25);
-
-
--- StarterGui.ScreenGui.SuperDuber.Normal
-G2L["20"] = Instance.new("TextButton", G2L["2"]);
-G2L["20"]["BorderSizePixel"] = 0;
-G2L["20"]["TextSize"] = 14;
-G2L["20"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["20"]["BackgroundColor3"] = Color3.fromRGB(67, 67, 67);
-G2L["20"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["20"]["ZIndex"] = 2;
-G2L["20"]["Size"] = UDim2.new(0, 60, 0.02, 16);
-G2L["20"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["20"]["Text"] = [[NormalCore]];
-G2L["20"]["Name"] = [[Normal]];
-G2L["20"]["Position"] = UDim2.new(0.04766, 0, 0.03499, 0);
-
-
--- StarterGui.ScreenGui.SuperDuber.Normal.UICorner
-G2L["21"] = Instance.new("UICorner", G2L["20"]);
-G2L["21"]["CornerRadius"] = UDim.new(0, 25);
-
-
--- StarterGui.ScreenGui.SuperDuber.Normal.UIStroke
-G2L["22"] = Instance.new("UIStroke", G2L["20"]);
-G2L["22"]["Transparency"] = 0.38;
-G2L["22"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-G2L["22"]["Thickness"] = 1.8;
-G2L["22"]["Color"] = Color3.fromRGB(158, 158, 158);
-
-
--- StarterGui.ScreenGui.SuperDuber.Normal.UIStroke.UIGradient
-G2L["23"] = Instance.new("UIGradient", G2L["22"]);
-G2L["23"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 0),NumberSequenceKeypoint.new(0.501, 1),NumberSequenceKeypoint.new(1.000, 0)};
-
-
--- StarterGui.ScreenGui.SuperDuber.Normal.UIStroke.UIGradient.LocalScript
-G2L["24"] = Instance.new("LocalScript", G2L["23"]);
-
-
-
--- StarterGui.ScreenGui.SuperDuber.UIStroke
-G2L["25"] = Instance.new("UIStroke", G2L["2"]);
-G2L["25"]["Transparency"] = 0.38;
-G2L["25"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-G2L["25"]["Thickness"] = 1.8;
-G2L["25"]["Color"] = Color3.fromRGB(158, 158, 158);
-
-
--- StarterGui.ScreenGui.SuperDuber.UIStroke.UIGradient
-G2L["26"] = Instance.new("UIGradient", G2L["25"]);
-G2L["26"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 0),NumberSequenceKeypoint.new(0.501, 1),NumberSequenceKeypoint.new(1.000, 0)};
-
-
--- StarterGui.ScreenGui.SuperDuber.UIStroke.UIGradient.LocalScript
-G2L["27"] = Instance.new("LocalScript", G2L["26"]);
-
-
-
--- StarterGui.ScreenGui.SuperDuber.CuteCore
-G2L["28"] = Instance.new("TextButton", G2L["2"]);
-G2L["28"]["BorderSizePixel"] = 0;
-G2L["28"]["TextSize"] = 14;
-G2L["28"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["28"]["BackgroundColor3"] = Color3.fromRGB(67, 67, 67);
-G2L["28"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["28"]["ZIndex"] = 2;
-G2L["28"]["Size"] = UDim2.new(0, 60, 0.02, 16);
-G2L["28"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["28"]["Text"] = [[CuteCore]];
-G2L["28"]["Name"] = [[CuteCore]];
-G2L["28"]["Position"] = UDim2.new(0.19766, 0, 0.03499, 0);
-
-
--- StarterGui.ScreenGui.SuperDuber.CuteCore.UICorner
-G2L["29"] = Instance.new("UICorner", G2L["28"]);
-G2L["29"]["CornerRadius"] = UDim.new(0, 25);
-
-
--- StarterGui.ScreenGui.SuperDuber.CuteCore.UIStroke
-G2L["2a"] = Instance.new("UIStroke", G2L["28"]);
-G2L["2a"]["Transparency"] = 0.38;
-G2L["2a"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
-G2L["2a"]["Thickness"] = 1.8;
-G2L["2a"]["Color"] = Color3.fromRGB(158, 158, 158);
-
-
--- StarterGui.ScreenGui.SuperDuber.CuteCore.UIStroke.UIGradient
-G2L["2b"] = Instance.new("UIGradient", G2L["2a"]);
-G2L["2b"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 0),NumberSequenceKeypoint.new(0.501, 1),NumberSequenceKeypoint.new(1.000, 0)};
-
-
--- StarterGui.ScreenGui.SuperDuber.CuteCore.UIStroke.UIGradient.LocalScript
-G2L["2c"] = Instance.new("LocalScript", G2L["2b"]);
-
-
-
--- StarterGui.ScreenGui.SuperDuber.ann
-G2L["2d"] = Instance.new("ImageLabel", G2L["2"]);
-G2L["2d"]["BorderSizePixel"] = 0;
-G2L["2d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2d"]["ImageTransparency"] = 0.75;
--- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["2d"]["Image"] = [[rbxassetid://1878425826]];
-G2L["2d"]["Size"] = UDim2.new(0, 450, 0, 291);
-G2L["2d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2d"]["BackgroundTransparency"] = 1;
-G2L["2d"]["Name"] = [[ann]];
-
-
--- StarterGui.ScreenGui.SuperDuber.ann.UICorner
-G2L["2e"] = Instance.new("UICorner", G2L["2d"]);
-G2L["2e"]["CornerRadius"] = UDim.new(0, 25);
-
-
--- StarterGui.ScreenGui.SuperDuber.super
-G2L["2f"] = Instance.new("ImageLabel", G2L["2"]);
-G2L["2f"]["BorderSizePixel"] = 0;
-G2L["2f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2f"]["ImageTransparency"] = 0.39;
--- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
-G2L["2f"]["Image"] = [[rbxassetid://10286206897]];
-G2L["2f"]["Size"] = UDim2.new(0, 450, 0, 291);
-G2L["2f"]["Visible"] = false;
-G2L["2f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2f"]["BackgroundTransparency"] = 1;
-G2L["2f"]["Name"] = [[super]];
-
-
--- StarterGui.ScreenGui.SuperDuber.super.UICorner
-G2L["30"] = Instance.new("UICorner", G2L["2f"]);
-G2L["30"]["CornerRadius"] = UDim.new(0, 25);
-
-
--- StarterGui.ScreenGui.SuperDuber.TextLabel
-G2L["31"] = Instance.new("TextLabel", G2L["2"]);
-G2L["31"]["ZIndex"] = 2;
-G2L["31"]["BorderSizePixel"] = 0;
-G2L["31"]["TextSize"] = 13;
-G2L["31"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["31"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["31"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["31"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["31"]["BackgroundTransparency"] = 1;
-G2L["31"]["Size"] = UDim2.new(0, 108, 0, 25);
-G2L["31"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["31"]["Text"] = [[by OutMoon and DreamyDolan2]];
-G2L["31"]["Position"] = UDim2.new(0.04889, 0, 0.89003, 0);
-
-
 -- StarterGui.ScreenGui.SuperDuber.LocalScript
-G2L["32"] = Instance.new("LocalScript", G2L["2"]);
+G2L["5"] = Instance.new("LocalScript", G2L["2"]);
 
 
 
 -- StarterGui.ScreenGui.SuperDuber.LocalScript
-G2L["33"] = Instance.new("LocalScript", G2L["2"]);
+G2L["6"] = Instance.new("LocalScript", G2L["2"]);
 
 
 
 -- StarterGui.ScreenGui.SuperDuber.LocalScript.Sound
-G2L["34"] = Instance.new("Sound", G2L["33"]);
-G2L["34"]["RollOffMode"] = Enum.RollOffMode.InverseTapered;
-G2L["34"]["SoundId"] = [[rbxassetid://17582299860]];
+G2L["7"] = Instance.new("Sound", G2L["6"]);
+G2L["7"]["RollOffMode"] = Enum.RollOffMode.InverseTapered;
+G2L["7"]["SoundId"] = [[rbxassetid://17582299860]];
 
 
 -- StarterGui.ScreenGui.SuperDuber.LocalScript
-G2L["35"] = Instance.new("LocalScript", G2L["2"]);
+G2L["8"] = Instance.new("LocalScript", G2L["2"]);
 
+
+
+-- StarterGui.ScreenGui.SuperDuber.TextBox
+G2L["9"] = Instance.new("TextBox", G2L["2"]);
+G2L["9"]["ZIndex"] = 2;
+G2L["9"]["BorderSizePixel"] = 0;
+G2L["9"]["TextSize"] = 14;
+G2L["9"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9"]["BackgroundColor3"] = Color3.fromRGB(30, 30, 30);
+G2L["9"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["9"]["Size"] = UDim2.new(0, 357, 0, 35);
+G2L["9"]["Position"] = UDim2.new(0.04889, 0, 0.14089, 0);
+G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9"]["Text"] = [[]];
+G2L["9"]["BackgroundTransparency"] = 0.55;
+
+
+-- StarterGui.ScreenGui.SuperDuber.TextBox.UICorner
+G2L["a"] = Instance.new("UICorner", G2L["9"]);
+G2L["a"]["CornerRadius"] = UDim.new(0, 25);
+
+
+-- StarterGui.ScreenGui.SuperDuber.TextBox.UIStroke
+G2L["b"] = Instance.new("UIStroke", G2L["9"]);
+G2L["b"]["Transparency"] = 0.38;
+G2L["b"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["b"]["Thickness"] = 1.8;
+G2L["b"]["Color"] = Color3.fromRGB(158, 158, 158);
+
+
+-- StarterGui.ScreenGui.SuperDuber.TextBox.UIStroke.UIGradient
+G2L["c"] = Instance.new("UIGradient", G2L["b"]);
+G2L["c"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 0),NumberSequenceKeypoint.new(0.501, 1),NumberSequenceKeypoint.new(1.000, 0)};
+
+
+-- StarterGui.ScreenGui.SuperDuber.TextBox.UIStroke.UIGradient.LocalScript
+G2L["d"] = Instance.new("LocalScript", G2L["c"]);
+
+
+
+-- StarterGui.ScreenGui.SuperDuber.TextLabel
+G2L["e"] = Instance.new("TextLabel", G2L["2"]);
+G2L["e"]["ZIndex"] = 2;
+G2L["e"]["BorderSizePixel"] = 0;
+G2L["e"]["TextSize"] = 26;
+G2L["e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["e"]["BackgroundTransparency"] = 1;
+G2L["e"]["Size"] = UDim2.new(0, 450, 0, 33);
+G2L["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["e"]["Text"] = [[ElysianHub]];
+G2L["e"]["Position"] = UDim2.new(-0, 0, 0, 0);
+
+
+-- StarterGui.ScreenGui.SuperDuber.ImageButton
+G2L["f"] = Instance.new("ImageButton", G2L["2"]);
+G2L["f"]["BorderSizePixel"] = 0;
+G2L["f"]["BackgroundTransparency"] = 1;
+-- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["f"]["BackgroundColor3"] = Color3.fromRGB(30, 30, 30);
+G2L["f"]["ZIndex"] = 2;
+G2L["f"]["Image"] = [[rbxassetid://15985408996]];
+G2L["f"]["Size"] = UDim2.new(0, 34, 0, 44);
+G2L["f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["f"]["Rotation"] = 135;
+G2L["f"]["Position"] = UDim2.new(0.87556, 0, 0.14433, 0);
+
+
+-- StarterGui.ScreenGui.SuperDuber.ImageButton.UIAspectRatioConstraint
+G2L["10"] = Instance.new("UIAspectRatioConstraint", G2L["f"]);
+
+
+
+-- StarterGui.ScreenGui.SuperDuber.ScrollingFrame
+G2L["11"] = Instance.new("ScrollingFrame", G2L["2"]);
+G2L["11"]["Active"] = true;
+G2L["11"]["ZIndex"] = 2;
+G2L["11"]["BorderSizePixel"] = 0;
+G2L["11"]["CanvasSize"] = UDim2.new(0, 0, 10, 0);
+G2L["11"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["11"]["Size"] = UDim2.new(0, 406, 0, 160);
+G2L["11"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["11"]["Position"] = UDim2.new(0.04889, 0, 0.32646, 0);
+G2L["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["11"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.UICorner
+G2L["12"] = Instance.new("UICorner", G2L["11"]);
+G2L["12"]["CornerRadius"] = UDim.new(0, 25);
+
+
+-- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.UIGridLayout
+G2L["13"] = Instance.new("UIGridLayout", G2L["11"]);
+G2L["13"]["CellSize"] = UDim2.new(0, 392, 0, 120);
+G2L["13"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+G2L["13"]["CellPadding"] = UDim2.new(0, 5, 0, 10);
+
+
+-- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example
+G2L["14"] = Instance.new("Frame", G2L["11"]);
+G2L["14"]["ZIndex"] = 2;
+G2L["14"]["BorderSizePixel"] = 0;
+G2L["14"]["BackgroundColor3"] = Color3.fromRGB(91, 91, 91);
+G2L["14"]["Size"] = UDim2.new(0, 392, 0, 124);
+G2L["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["14"]["Name"] = [[Example]];
+G2L["14"]["BackgroundTransparency"] = 0.45;
+
+
+-- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.TextLabel
+G2L["15"] = Instance.new("TextLabel", G2L["14"]);
+G2L["15"]["TextWrapped"] = true;
+G2L["15"]["ZIndex"] = 2;
+G2L["15"]["BorderSizePixel"] = 0;
+G2L["15"]["TextSize"] = 20;
+G2L["15"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["15"]["TextScaled"] = true;
+G2L["15"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["15"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["15"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["15"]["BackgroundTransparency"] = 1;
+G2L["15"]["Size"] = UDim2.new(-0.05745, 210, 0.07705, 30);
+G2L["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["15"]["Text"] = [[Example name]];
+G2L["15"]["Position"] = UDim2.new(0.11949, 0, 0.11527, 0);
+
+
+-- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.ImageLabel
+G2L["16"] = Instance.new("ImageLabel", G2L["14"]);
+G2L["16"]["ZIndex"] = 2;
+G2L["16"]["BorderSizePixel"] = 0;
+G2L["16"]["BackgroundColor3"] = Color3.fromRGB(27, 27, 27);
+-- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["16"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["16"]["Image"] = [[rbxassetid://104649966280536]];
+G2L["16"]["Size"] = UDim2.new(0, 41, 0, 35);
+G2L["16"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["16"]["BackgroundTransparency"] = 1;
+G2L["16"]["Position"] = UDim2.new(0.06, 0, 0.5, 0);
+
+
+-- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.ImageLabel.UICorner
+G2L["17"] = Instance.new("UICorner", G2L["16"]);
+G2L["17"]["CornerRadius"] = UDim.new(0, 25);
+
+
+-- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.ImageLabel.UIAspectRatioConstraint
+G2L["18"] = Instance.new("UIAspectRatioConstraint", G2L["16"]);
+
+
+
+-- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.UICorner
+G2L["19"] = Instance.new("UICorner", G2L["14"]);
+G2L["19"]["CornerRadius"] = UDim.new(0, 25);
+
+
+-- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.TextButton
+G2L["1a"] = Instance.new("TextButton", G2L["14"]);
+G2L["1a"]["BorderSizePixel"] = 0;
+G2L["1a"]["TextSize"] = 14;
+G2L["1a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(67, 67, 67);
+G2L["1a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["1a"]["ZIndex"] = 2;
+G2L["1a"]["Size"] = UDim2.new(0, 87, 0, 29);
+G2L["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1a"]["Text"] = [[Run]];
+G2L["1a"]["Position"] = UDim2.new(0.75655, 0, 0.15121, 0);
+
+
+-- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.TextButton.UICorner
+G2L["1b"] = Instance.new("UICorner", G2L["1a"]);
+G2L["1b"]["CornerRadius"] = UDim.new(0, 25);
+
+
+-- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.View
+G2L["1c"] = Instance.new("ImageLabel", G2L["14"]);
+G2L["1c"]["BorderSizePixel"] = 0;
+G2L["1c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+-- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["1c"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["1c"]["Image"] = [[rbxassetid://104741126012073]];
+G2L["1c"]["Size"] = UDim2.new(0, 34, 0, 26);
+G2L["1c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1c"]["BackgroundTransparency"] = 1;
+G2L["1c"]["Name"] = [[View]];
+G2L["1c"]["Position"] = UDim2.new(0.15, 0, 0.76, 0);
+
+
+-- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.View.UIAspectRatioConstraint
+G2L["1d"] = Instance.new("UIAspectRatioConstraint", G2L["1c"]);
+
+
+
+-- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.View.TextLabel
+G2L["1e"] = Instance.new("TextLabel", G2L["1c"]);
+G2L["1e"]["TextWrapped"] = true;
+G2L["1e"]["ZIndex"] = 2;
+G2L["1e"]["BorderSizePixel"] = 0;
+G2L["1e"]["TextSize"] = 20;
+G2L["1e"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["1e"]["TextScaled"] = true;
+G2L["1e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["1e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1e"]["BackgroundTransparency"] = 1;
+G2L["1e"]["Size"] = UDim2.new(-5.69334, 210, -0.53833, 30);
+G2L["1e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1e"]["Text"] = [[1million]];
+G2L["1e"]["Position"] = UDim2.new(1.23488, 0, 0.19219, 0);
+
+
+-- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.Copy
+G2L["1f"] = Instance.new("ImageLabel", G2L["14"]);
+G2L["1f"]["BorderSizePixel"] = 0;
+G2L["1f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+-- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["1f"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["1f"]["Image"] = [[rbxassetid://86138545569367]];
+G2L["1f"]["Size"] = UDim2.new(0, 34, 0, 26);
+G2L["1f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1f"]["BackgroundTransparency"] = 1;
+G2L["1f"]["Name"] = [[Copy]];
+G2L["1f"]["Position"] = UDim2.new(0.39, 0, 0.76, 0);
+
+
+-- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.Copy.UIAspectRatioConstraint
+G2L["20"] = Instance.new("UIAspectRatioConstraint", G2L["1f"]);
+
+
+
+-- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.Copy.TextLabel
+G2L["21"] = Instance.new("TextLabel", G2L["1f"]);
+G2L["21"]["TextWrapped"] = true;
+G2L["21"]["ZIndex"] = 2;
+G2L["21"]["BorderSizePixel"] = 0;
+G2L["21"]["TextSize"] = 20;
+G2L["21"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["21"]["TextScaled"] = true;
+G2L["21"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["21"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["21"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["21"]["BackgroundTransparency"] = 1;
+G2L["21"]["Size"] = UDim2.new(-4.9395, 210, -0.53833, 30);
+G2L["21"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["21"]["Text"] = [[ClickToCopy]];
+G2L["21"]["Position"] = UDim2.new(1.23488, 0, 0.19219, 0);
+
+
+-- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.Copy.TextButton
+G2L["22"] = Instance.new("TextButton", G2L["1f"]);
+G2L["22"]["BorderSizePixel"] = 0;
+G2L["22"]["TextTransparency"] = 1;
+G2L["22"]["TextSize"] = 14;
+G2L["22"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["22"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["22"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["22"]["BackgroundTransparency"] = 1;
+G2L["22"]["Size"] = UDim2.new(0, 76, 0, 21);
+G2L["22"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["22"]["Position"] = UDim2.new(-0, 0, 0, 0);
+
+
+-- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.COntainsKEy
+G2L["23"] = Instance.new("ImageLabel", G2L["14"]);
+G2L["23"]["BorderSizePixel"] = 0;
+G2L["23"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+-- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["23"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["23"]["Image"] = [[rbxassetid://81864026272064]];
+G2L["23"]["Size"] = UDim2.new(0, 34, 0, 26);
+G2L["23"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["23"]["BackgroundTransparency"] = 1;
+G2L["23"]["Name"] = [[COntainsKEy]];
+G2L["23"]["Position"] = UDim2.new(0.68, 0, 0.76, 0);
+
+
+-- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.COntainsKEy.UIAspectRatioConstraint
+G2L["24"] = Instance.new("UIAspectRatioConstraint", G2L["23"]);
+
+
+
+-- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.COntainsKEy.TextLabel
+G2L["25"] = Instance.new("TextLabel", G2L["23"]);
+G2L["25"]["TextWrapped"] = true;
+G2L["25"]["ZIndex"] = 2;
+G2L["25"]["BorderSizePixel"] = 0;
+G2L["25"]["TextSize"] = 20;
+G2L["25"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["25"]["TextScaled"] = true;
+G2L["25"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["25"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["25"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["25"]["BackgroundTransparency"] = 1;
+G2L["25"]["Size"] = UDim2.new(-4.75641, 210, -0.53833, 30);
+G2L["25"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["25"]["Text"] = [[ClickToCopy]];
+G2L["25"]["Position"] = UDim2.new(1.23488, 0, 0.19219, 0);
+
+
+-- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.COntainsKEy.TextButton
+G2L["26"] = Instance.new("TextButton", G2L["23"]);
+G2L["26"]["BorderSizePixel"] = 0;
+G2L["26"]["TextTransparency"] = 1;
+G2L["26"]["TextSize"] = 14;
+G2L["26"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["26"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["26"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["26"]["BackgroundTransparency"] = 1;
+G2L["26"]["Size"] = UDim2.new(0, 76, 0, 21);
+G2L["26"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["26"]["Position"] = UDim2.new(-0, 0, 0, 0);
+
+
+-- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.Verify
+G2L["27"] = Instance.new("ImageLabel", G2L["14"]);
+G2L["27"]["BorderSizePixel"] = 0;
+G2L["27"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+-- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["27"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["27"]["Image"] = [[rbxassetid://106324515607448]];
+G2L["27"]["Size"] = UDim2.new(0, 34, 0, 26);
+G2L["27"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["27"]["BackgroundTransparency"] = 1;
+G2L["27"]["Name"] = [[Verify]];
+G2L["27"]["Position"] = UDim2.new(0.15194, 0, 0.535, 0);
+
+
+-- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.Verify.UIAspectRatioConstraint
+G2L["28"] = Instance.new("UIAspectRatioConstraint", G2L["27"]);
+
+
+
+-- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.Verify.TextLabel
+G2L["29"] = Instance.new("TextLabel", G2L["27"]);
+G2L["29"]["TextWrapped"] = true;
+G2L["29"]["ZIndex"] = 2;
+G2L["29"]["BorderSizePixel"] = 0;
+G2L["29"]["TextSize"] = 20;
+G2L["29"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["29"]["TextScaled"] = true;
+G2L["29"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["29"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["29"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["29"]["BackgroundTransparency"] = 1;
+G2L["29"]["Size"] = UDim2.new(-4.98053, 210, -0.53833, 30);
+G2L["29"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["29"]["Text"] = [[ClickToCopy]];
+G2L["29"]["Position"] = UDim2.new(1.23488, 0, 0.19219, 0);
+
+
+-- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.Verify.TextButton
+G2L["2a"] = Instance.new("TextButton", G2L["27"]);
+G2L["2a"]["BorderSizePixel"] = 0;
+G2L["2a"]["TextTransparency"] = 1;
+G2L["2a"]["TextSize"] = 14;
+G2L["2a"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2a"]["BackgroundTransparency"] = 1;
+G2L["2a"]["Size"] = UDim2.new(0, 76, 0, 21);
+G2L["2a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2a"]["Position"] = UDim2.new(-0, 0, 0, 0);
+
+
+-- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.Place
+G2L["2b"] = Instance.new("ImageLabel", G2L["14"]);
+G2L["2b"]["BorderSizePixel"] = 0;
+G2L["2b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+-- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["2b"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["2b"]["Image"] = [[rbxassetid://76183981184625]];
+G2L["2b"]["Size"] = UDim2.new(0, 34, 0, 26);
+G2L["2b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2b"]["BackgroundTransparency"] = 1;
+G2L["2b"]["Name"] = [[Place]];
+G2L["2b"]["Position"] = UDim2.new(0.4551, 0, 0.54333, 0);
+
+
+-- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.Place.UIAspectRatioConstraint
+G2L["2c"] = Instance.new("UIAspectRatioConstraint", G2L["2b"]);
+
+
+
+-- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.Place.TextLabel
+G2L["2d"] = Instance.new("TextLabel", G2L["2b"]);
+G2L["2d"]["TextWrapped"] = true;
+G2L["2d"]["ZIndex"] = 2;
+G2L["2d"]["BorderSizePixel"] = 0;
+G2L["2d"]["TextSize"] = 20;
+G2L["2d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["2d"]["TextScaled"] = true;
+G2L["2d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["2d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2d"]["BackgroundTransparency"] = 1;
+G2L["2d"]["Size"] = UDim2.new(-4.26692, 210, -0.53833, 30);
+G2L["2d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2d"]["Text"] = [[ClickToCopy]];
+G2L["2d"]["Position"] = UDim2.new(1.23488, 0, 0.19219, 0);
+
+
+-- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.Place.TextButton
+G2L["2e"] = Instance.new("TextButton", G2L["2b"]);
+G2L["2e"]["BorderSizePixel"] = 0;
+G2L["2e"]["TextTransparency"] = 1;
+G2L["2e"]["TextSize"] = 14;
+G2L["2e"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2e"]["BackgroundTransparency"] = 1;
+G2L["2e"]["Size"] = UDim2.new(0, 76, 0, 21);
+G2L["2e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2e"]["Position"] = UDim2.new(-0, 0, 0, 0);
+
+
+-- StarterGui.ScreenGui.SuperDuber.ScrollingFrame.Example.Count
+G2L["2f"] = Instance.new("TextLabel", G2L["14"]);
+G2L["2f"]["BorderSizePixel"] = 0;
+G2L["2f"]["TextSize"] = 28;
+G2L["2f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["2f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2f"]["BackgroundTransparency"] = 1;
+G2L["2f"]["Size"] = UDim2.new(0, 41, 0, 32);
+G2L["2f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2f"]["Text"] = [[1]];
+G2L["2f"]["Name"] = [[Count]];
+
+
+-- StarterGui.ScreenGui.SuperDuber.UICorner
+G2L["30"] = Instance.new("UICorner", G2L["2"]);
+G2L["30"]["CornerRadius"] = UDim.new(0, 25);
+
+
+-- StarterGui.ScreenGui.SuperDuber.Normal
+G2L["31"] = Instance.new("TextButton", G2L["2"]);
+G2L["31"]["BorderSizePixel"] = 0;
+G2L["31"]["TextSize"] = 14;
+G2L["31"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["31"]["BackgroundColor3"] = Color3.fromRGB(67, 67, 67);
+G2L["31"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["31"]["ZIndex"] = 2;
+G2L["31"]["Size"] = UDim2.new(0, 60, 0.02, 16);
+G2L["31"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["31"]["Text"] = [[NormalCore]];
+G2L["31"]["Name"] = [[Normal]];
+G2L["31"]["Position"] = UDim2.new(0.04766, 0, 0.03499, 0);
+
+
+-- StarterGui.ScreenGui.SuperDuber.Normal.UICorner
+G2L["32"] = Instance.new("UICorner", G2L["31"]);
+G2L["32"]["CornerRadius"] = UDim.new(0, 25);
+
+
+-- StarterGui.ScreenGui.SuperDuber.Normal.UIStroke
+G2L["33"] = Instance.new("UIStroke", G2L["31"]);
+G2L["33"]["Transparency"] = 0.38;
+G2L["33"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["33"]["Thickness"] = 1.8;
+G2L["33"]["Color"] = Color3.fromRGB(158, 158, 158);
+
+
+-- StarterGui.ScreenGui.SuperDuber.Normal.UIStroke.UIGradient
+G2L["34"] = Instance.new("UIGradient", G2L["33"]);
+G2L["34"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 0),NumberSequenceKeypoint.new(0.501, 1),NumberSequenceKeypoint.new(1.000, 0)};
+
+
+-- StarterGui.ScreenGui.SuperDuber.Normal.UIStroke.UIGradient.LocalScript
+G2L["35"] = Instance.new("LocalScript", G2L["34"]);
+
+
+
+-- StarterGui.ScreenGui.SuperDuber.UIStroke
+G2L["36"] = Instance.new("UIStroke", G2L["2"]);
+G2L["36"]["Transparency"] = 0.38;
+G2L["36"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["36"]["Thickness"] = 1.8;
+G2L["36"]["Color"] = Color3.fromRGB(158, 158, 158);
+
+
+-- StarterGui.ScreenGui.SuperDuber.UIStroke.UIGradient
+G2L["37"] = Instance.new("UIGradient", G2L["36"]);
+G2L["37"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 0),NumberSequenceKeypoint.new(0.501, 1),NumberSequenceKeypoint.new(1.000, 0)};
+
+
+-- StarterGui.ScreenGui.SuperDuber.UIStroke.UIGradient.LocalScript
+G2L["38"] = Instance.new("LocalScript", G2L["37"]);
+
+
+
+-- StarterGui.ScreenGui.SuperDuber.CuteCore
+G2L["39"] = Instance.new("TextButton", G2L["2"]);
+G2L["39"]["BorderSizePixel"] = 0;
+G2L["39"]["TextSize"] = 14;
+G2L["39"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["39"]["BackgroundColor3"] = Color3.fromRGB(67, 67, 67);
+G2L["39"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["39"]["ZIndex"] = 2;
+G2L["39"]["Size"] = UDim2.new(0, 60, 0.02, 16);
+G2L["39"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["39"]["Text"] = [[CuteCore]];
+G2L["39"]["Name"] = [[CuteCore]];
+G2L["39"]["Position"] = UDim2.new(0.19766, 0, 0.03499, 0);
+
+
+-- StarterGui.ScreenGui.SuperDuber.CuteCore.UICorner
+G2L["3a"] = Instance.new("UICorner", G2L["39"]);
+G2L["3a"]["CornerRadius"] = UDim.new(0, 25);
+
+
+-- StarterGui.ScreenGui.SuperDuber.CuteCore.UIStroke
+G2L["3b"] = Instance.new("UIStroke", G2L["39"]);
+G2L["3b"]["Transparency"] = 0.38;
+G2L["3b"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["3b"]["Thickness"] = 1.8;
+G2L["3b"]["Color"] = Color3.fromRGB(158, 158, 158);
+
+
+-- StarterGui.ScreenGui.SuperDuber.CuteCore.UIStroke.UIGradient
+G2L["3c"] = Instance.new("UIGradient", G2L["3b"]);
+G2L["3c"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 0),NumberSequenceKeypoint.new(0.501, 1),NumberSequenceKeypoint.new(1.000, 0)};
+
+
+-- StarterGui.ScreenGui.SuperDuber.CuteCore.UIStroke.UIGradient.LocalScript
+G2L["3d"] = Instance.new("LocalScript", G2L["3c"]);
+
+
+
+-- StarterGui.ScreenGui.SuperDuber.ann
+G2L["3e"] = Instance.new("ImageLabel", G2L["2"]);
+G2L["3e"]["BorderSizePixel"] = 0;
+G2L["3e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3e"]["ImageTransparency"] = 0.75;
+-- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["3e"]["Image"] = [[rbxassetid://1878425826]];
+G2L["3e"]["Size"] = UDim2.new(0, 450, 0, 291);
+G2L["3e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3e"]["BackgroundTransparency"] = 1;
+G2L["3e"]["Name"] = [[ann]];
+
+
+-- StarterGui.ScreenGui.SuperDuber.ann.UICorner
+G2L["3f"] = Instance.new("UICorner", G2L["3e"]);
+G2L["3f"]["CornerRadius"] = UDim.new(0, 25);
+
+
+-- StarterGui.ScreenGui.SuperDuber.TextLabel
+G2L["40"] = Instance.new("TextLabel", G2L["2"]);
+G2L["40"]["ZIndex"] = 2;
+G2L["40"]["BorderSizePixel"] = 0;
+G2L["40"]["TextSize"] = 13;
+G2L["40"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["40"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["40"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["40"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["40"]["BackgroundTransparency"] = 1;
+G2L["40"]["Size"] = UDim2.new(0, 108, 0, 25);
+G2L["40"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["40"]["Text"] = [[by OutMoon and DreamyDolan2]];
+G2L["40"]["Position"] = UDim2.new(0.04889, 0, 0.89003, 0);
+
+
+-- StarterGui.ScreenGui.SuperDuber.super
+G2L["41"] = Instance.new("ImageLabel", G2L["2"]);
+G2L["41"]["BorderSizePixel"] = 0;
+G2L["41"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["41"]["ImageTransparency"] = 0.39;
+-- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["41"]["Image"] = [[rbxassetid://10286206897]];
+G2L["41"]["Size"] = UDim2.new(0, 450, 0, 291);
+G2L["41"]["Visible"] = false;
+G2L["41"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["41"]["BackgroundTransparency"] = 1;
+G2L["41"]["Name"] = [[super]];
+
+
+-- StarterGui.ScreenGui.SuperDuber.super.UICorner
+G2L["42"] = Instance.new("UICorner", G2L["41"]);
+G2L["42"]["CornerRadius"] = UDim.new(0, 25);
 
 
 -- StarterGui.ScreenGui.SuperDuber.UIDrag
@@ -542,7 +707,6 @@ local script = G2L["4"];
 		end
 	end
 	
-	
 	local function SearchScripts(txt)
 		clearResults()
 		local ok, response = pcall(function()
@@ -578,6 +742,26 @@ local script = G2L["4"];
 				holder.Parent = script.Parent.ScrollingFrame
 				holder.Visible = true
 				holder.Size = UDim2.new(1,-10,0,40)
+	
+				if info.key == false then
+					holder.COntainsKEy.TextLabel.Text = " Dont Contains Key!!"
+				elseif info.key == true then
+					holder.COntainsKEy.TextLabel.Text = "Contains Key!!"
+				end
+	
+				if info.verified == false then
+					holder.Verify.TextLabel.Text = "Not Verified!"
+				elseif info.verified == true then
+					holder.Verify.TextLabel.Text = "Verified!"
+				end
+	
+				
+				local countLabel = holder:FindFirstChild("Count")
+				if countLabel and countLabel:IsA("TextLabel") then
+					countLabel.Text = tostring(i)
+				end
+	
+				holder.Place.TextLabel.Text = tostring(info.game._id)
 				holder.Copy.TextButton.MouseButton1Click:Connect(function()
 					setclipboard(tostring(info.script))
 				end)
@@ -604,11 +788,7 @@ local script = G2L["4"];
 	
 				local imageLabel = holder:FindFirstChild("ImageLabel")
 				if imageLabel then
-					if info.icon and tostring(info.icon) ~= "" then
-						imageLabel.Image = "rbxassetid://"..tostring(info.icon)
-					else
-						imageLabel.Image = "rbxassetid://10464996285" 
-					end
+					imageLabel.Image = "rbxassetid://"..tostring(info.imageUrl)
 				end
 			end
 		end
@@ -625,53 +805,9 @@ local script = G2L["4"];
 	
 end;
 task.spawn(C_4);
--- StarterGui.ScreenGui.SuperDuber.TextBox.UIStroke.UIGradient.LocalScript
-local function C_9()
-local script = G2L["9"];
-	local speed = 5
-	
-	while true do
-		wait(0.05)
-		script.Parent.Rotation += speed
-	end
-end;
-task.spawn(C_9);
--- StarterGui.ScreenGui.SuperDuber.Normal.UIStroke.UIGradient.LocalScript
-local function C_24()
-local script = G2L["24"];
-	local speed = 5
-	
-	while true do
-		wait(0.05)
-		script.Parent.Rotation += speed
-	end
-end;
-task.spawn(C_24);
--- StarterGui.ScreenGui.SuperDuber.UIStroke.UIGradient.LocalScript
-local function C_27()
-local script = G2L["27"];
-	local speed = 5
-	
-	while true do
-		wait(0.05)
-		script.Parent.Rotation += speed
-	end
-end;
-task.spawn(C_27);
--- StarterGui.ScreenGui.SuperDuber.CuteCore.UIStroke.UIGradient.LocalScript
-local function C_2c()
-local script = G2L["2c"];
-	local speed = 5
-	
-	while true do
-		wait(0.05)
-		script.Parent.Rotation += speed
-	end
-end;
-task.spawn(C_2c);
 -- StarterGui.ScreenGui.SuperDuber.LocalScript
-local function C_32()
-local script = G2L["32"];
+local function C_5()
+local script = G2L["5"];
 	local TweenService = game:GetService("TweenService")
 	local cutecore = script.Parent:FindFirstChild("CuteCore")
 	local normal = script.Parent:FindFirstChild("Normal")
@@ -777,7 +913,6 @@ local script = G2L["32"];
 	    end
 	end
 	
-	-- If the frame name is "LOL", apply pink theme to it and its children
 	if parentFrame.Name == "LOL" then
 	    applyPinkThemeToFrameAndChildren(parentFrame)
 	end
@@ -810,10 +945,10 @@ local script = G2L["32"];
 	
 	
 end;
-task.spawn(C_32);
+task.spawn(C_5);
 -- StarterGui.ScreenGui.SuperDuber.LocalScript
-local function C_33()
-local script = G2L["33"];
+local function C_6()
+local script = G2L["6"];
 	local sound = script:FindFirstChild("Sound")
 	local devUserId = 8163040905
 	local client = game.Players.LocalPlayer
@@ -848,15 +983,59 @@ local script = G2L["33"];
 	
 	
 end;
-task.spawn(C_33);
+task.spawn(C_6);
 -- StarterGui.ScreenGui.SuperDuber.LocalScript
-local function C_35()
-local script = G2L["35"];
+local function C_8()
+local script = G2L["8"];
 	local chat = game:GetService("Chat")
 	local char = game.Players.LocalPlayer.Character
 	
-	chat:Chat(char, "ElysianHub V3 loaded for "..game.Players.LocalPlayer.Name.." !!", Enum.ChatColor.White)
+	chat:Chat(char, "ElysianHub V3.5 loaded for "..game.Players.LocalPlayer.Name.." !!", Enum.ChatColor.White)
+end;
+task.spawn(C_8);
+-- StarterGui.ScreenGui.SuperDuber.TextBox.UIStroke.UIGradient.LocalScript
+local function C_d()
+local script = G2L["d"];
+	local speed = 5
+	
+	while true do
+		wait(0.05)
+		script.Parent.Rotation += speed
+	end
+end;
+task.spawn(C_d);
+-- StarterGui.ScreenGui.SuperDuber.Normal.UIStroke.UIGradient.LocalScript
+local function C_35()
+local script = G2L["35"];
+	local speed = 5
+	
+	while true do
+		wait(0.05)
+		script.Parent.Rotation += speed
+	end
 end;
 task.spawn(C_35);
+-- StarterGui.ScreenGui.SuperDuber.UIStroke.UIGradient.LocalScript
+local function C_38()
+local script = G2L["38"];
+	local speed = 5
+	
+	while true do
+		wait(0.05)
+		script.Parent.Rotation += speed
+	end
+end;
+task.spawn(C_38);
+-- StarterGui.ScreenGui.SuperDuber.CuteCore.UIStroke.UIGradient.LocalScript
+local function C_3d()
+local script = G2L["3d"];
+	local speed = 5
+	
+	while true do
+		wait(0.05)
+		script.Parent.Rotation += speed
+	end
+end;
+task.spawn(C_3d);
 
 return G2L["1"], require;
