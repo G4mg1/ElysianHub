@@ -641,24 +641,24 @@ G2L["42"]["CornerRadius"] = UDim.new(0, 25);
 
 -- StarterGui.ScreenGui.SuperDuber.UIDrag
 local function C_3()
-local script = G2L["3"];
+	local script = G2L["3"];
 	-- Made by Real_IceyDev (@lceyDex) --
 	-- Simple UI dragger (PC Only/Any device that has a mouse) --
-	
+
 	local UIS = game:GetService('UserInputService')
 	local frame = script.Parent
 	local dragToggle = nil
 	local dragSpeed = 0.25
 	local dragStart = nil
 	local startPos = nil
-	
+
 	local function updateInput(input)
 		local delta = input.Position - dragStart
 		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
 			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
 		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
 	end
-	
+
 	frame.InputBegan:Connect(function(input)
 		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
 			dragToggle = true
@@ -671,7 +671,7 @@ local script = G2L["3"];
 			end)
 		end
 	end)
-	
+
 	UIS.InputChanged:Connect(function(input)
 		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
 			if dragToggle then
@@ -683,17 +683,17 @@ end;
 task.spawn(C_3);
 -- StarterGui.ScreenGui.SuperDuber.LocalScript
 local function C_4()
-local script = G2L["4"];
+	local script = G2L["4"];
 	local Example = script.Parent.ScrollingFrame:FindFirstChild("Example")
 	local Searchbtn = script.Parent:FindFirstChild("ImageButton")
 	local search = script.Parent:FindFirstChild("TextBox")
-	
+
 	local HttpService = game:GetService("HttpService")
-	
+
 	if Example then
 		Example.Visible = false
 	end
-	
+
 	local function clearResults()
 		local scrollingFrame = script.Parent.ScrollingFrame
 		local children = scrollingFrame:GetChildren()
@@ -706,14 +706,14 @@ local script = G2L["4"];
 			end
 		end
 	end
-	
+
 	local function SearchScripts(txt)
 		clearResults()
 		local ok, response = pcall(function()
 			return game:HttpGet("https://scriptblox.com/api/script/search?q="..txt.."&page=1&max=1000")
 		end)
 		if not ok or not response then return end
-	
+
 		local data = HttpService:JSONDecode(response)
 		if not data.result or not data.result.scripts or #data.result.scripts == 0 then
 			if Example then
@@ -733,7 +733,7 @@ local script = G2L["4"];
 			end
 			return
 		end
-	
+
 		for i = 1, #data.result.scripts do
 			local info = data.result.scripts[i]
 			if Example then
@@ -742,40 +742,40 @@ local script = G2L["4"];
 				holder.Parent = script.Parent.ScrollingFrame
 				holder.Visible = true
 				holder.Size = UDim2.new(1,-10,0,40)
-	
+
 				if info.key == false then
 					holder.COntainsKEy.TextLabel.Text = " Dont Contains Key!!"
 				elseif info.key == true then
 					holder.COntainsKEy.TextLabel.Text = "Contains Key!!"
 				end
-	
+
 				if info.verified == false then
 					holder.Verify.TextLabel.Text = "Not Verified!"
 				elseif info.verified == true then
 					holder.Verify.TextLabel.Text = "Verified!"
 				end
-	
-				
+
+
 				local countLabel = holder:FindFirstChild("Count")
 				if countLabel and countLabel:IsA("TextLabel") then
 					countLabel.Text = tostring(i)
 				end
-	
+
 				holder.Place.TextLabel.Text = tostring(info.game._id)
 				holder.Copy.TextButton.MouseButton1Click:Connect(function()
 					setclipboard(tostring(info.script))
 				end)
-	
+
 				local viewLabel = holder:FindFirstChild("View")
 				if viewLabel and viewLabel:FindFirstChild("TextLabel") then
 					viewLabel.TextLabel.Text = tostring(info.views or "0")
 				end
-	
+
 				local textLabel = holder:FindFirstChild("TextLabel")
 				if textLabel then
 					textLabel.Text = info.title or "No Title"
 				end
-	
+
 				local textButton = holder:FindFirstChild("TextButton")
 				if textButton then
 					textButton.Visible = true
@@ -785,7 +785,7 @@ local script = G2L["4"];
 						end)
 					end)
 				end
-	
+
 				local imageLabel = holder:FindFirstChild("ImageLabel")
 				if imageLabel then
 					imageLabel.Image = "rbxassetid://"..tostring(info.imageUrl)
@@ -793,7 +793,7 @@ local script = G2L["4"];
 			end
 		end
 	end
-	
+
 	if Searchbtn then
 		Searchbtn.MouseButton1Click:Connect(function()
 			if search and search.Text ~= "" then
@@ -801,158 +801,158 @@ local script = G2L["4"];
 			end
 		end)
 	end
-	
-	
+
+
 end;
 task.spawn(C_4);
 -- StarterGui.ScreenGui.SuperDuber.LocalScript
 local function C_5()
-local script = G2L["5"];
+	local script = G2L["5"];
 	local TweenService = game:GetService("TweenService")
 	local cutecore = script.Parent:FindFirstChild("CuteCore")
 	local normal = script.Parent:FindFirstChild("Normal")
 	local parentFrame = script.Parent
 	local ann = script.Parent:FindFirstChild("ann")
 	local super = script.Parent:FindFirstChild("super")
-	
-	
+
+
 	local function isClone(frame)
-	    return string.find(frame.Name, "Clone") ~= nil
+		return string.find(frame.Name, "Clone") ~= nil
 	end
-	
+
 	if isClone(parentFrame) then
-	    return
+		return
 	end
-	
+
 	local originalColors = {}
 	local originalStrokeColors = {}
-	
+
 	local pinks = {
-	    TextBox = Color3.fromRGB(255, 21, 255), 
-	    TextLabel = Color3.fromRGB(255, 255, 255), 
-	    Frame = Color3.fromRGB(228, 73, 255), 
-	    TextButton = Color3.fromRGB(255, 11, 251),
-	    UIStroke = Color3.fromRGB(151, 0, 162) 
+		TextBox = Color3.fromRGB(255, 21, 255), 
+		TextLabel = Color3.fromRGB(255, 255, 255), 
+		Frame = Color3.fromRGB(228, 73, 255), 
+		TextButton = Color3.fromRGB(255, 11, 251),
+		UIStroke = Color3.fromRGB(151, 0, 162) 
 	}
-	
+
 	local function tweenColor(guiObj, targetColor)
-	    if guiObj.BackgroundColor3 then
-	        local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
-	        local propertyTable = {BackgroundColor3 = targetColor}
-	        local tween = TweenService:Create(guiObj, tweenInfo, propertyTable)
-	        tween:Play()
-	    end
+		if guiObj.BackgroundColor3 then
+			local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+			local propertyTable = {BackgroundColor3 = targetColor}
+			local tween = TweenService:Create(guiObj, tweenInfo, propertyTable)
+			tween:Play()
+		end
 	end
-	
+
 	local function tweenStrokeColor(strokeObj, targetColor)
-	    if strokeObj:IsA("UIStroke") then
-	        local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
-	        local propertyTable = {Color = targetColor}
-	        local tween = TweenService:Create(strokeObj, tweenInfo, propertyTable)
-	        tween:Play()
-	    end
+		if strokeObj:IsA("UIStroke") then
+			local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+			local propertyTable = {Color = targetColor}
+			local tween = TweenService:Create(strokeObj, tweenInfo, propertyTable)
+			tween:Play()
+		end
 	end
-	
+
 	local function getAllGuiObjectsAndStrokes(obj)
-	    local guiObjects = {}
-	    local strokeObjects = {}
-	    if obj:IsA("TextBox") or obj:IsA("TextLabel") or obj:IsA("Frame") or obj:IsA("TextButton") then
-	        table.insert(guiObjects, obj)
-	    end
-	    if obj:IsA("UIStroke") then
-	        table.insert(strokeObjects, obj)
-	    end
-	    for i, child in obj:GetChildren() do
-	        local childGuiObjs, childStrokeObjs = getAllGuiObjectsAndStrokes(child)
-	        for j, c in childGuiObjs do
-	            table.insert(guiObjects, c)
-	        end
-	        for k, s in childStrokeObjs do
-	            table.insert(strokeObjects, s)
-	        end
-	    end
-	    return guiObjects, strokeObjects
+		local guiObjects = {}
+		local strokeObjects = {}
+		if obj:IsA("TextBox") or obj:IsA("TextLabel") or obj:IsA("Frame") or obj:IsA("TextButton") then
+			table.insert(guiObjects, obj)
+		end
+		if obj:IsA("UIStroke") then
+			table.insert(strokeObjects, obj)
+		end
+		for i, child in obj:GetChildren() do
+			local childGuiObjs, childStrokeObjs = getAllGuiObjectsAndStrokes(child)
+			for j, c in childGuiObjs do
+				table.insert(guiObjects, c)
+			end
+			for k, s in childStrokeObjs do
+				table.insert(strokeObjects, s)
+			end
+		end
+		return guiObjects, strokeObjects
 	end
-	
+
 	local function saveOriginalColors()
-	    originalColors = {}
-	    originalStrokeColors = {}
-	    local guiObjects, strokeObjects = getAllGuiObjectsAndStrokes(parentFrame)
-	    for i, guiObj in guiObjects do
-	        originalColors[guiObj] = guiObj.BackgroundColor3
-	    end
-	    for i, strokeObj in strokeObjects do
-	        originalStrokeColors[strokeObj] = strokeObj.Color
-	    end
+		originalColors = {}
+		originalStrokeColors = {}
+		local guiObjects, strokeObjects = getAllGuiObjectsAndStrokes(parentFrame)
+		for i, guiObj in guiObjects do
+			originalColors[guiObj] = guiObj.BackgroundColor3
+		end
+		for i, strokeObj in strokeObjects do
+			originalStrokeColors[strokeObj] = strokeObj.Color
+		end
 	end
-	
+
 	local function applyPinkThemeToFrameAndChildren(frame)
-	    local guiObjects, strokeObjects = getAllGuiObjectsAndStrokes(frame)
-	    for i, guiObj in guiObjects do
-	        if guiObj:IsA("TextBox") then
-	            tweenColor(guiObj, pinks.TextBox)
-	        elseif guiObj:IsA("TextLabel") then
-	            tweenColor(guiObj, pinks.TextLabel)
-	        elseif guiObj:IsA("Frame") then
-	            tweenColor(guiObj, pinks.Frame)
-	        elseif guiObj:IsA("TextButton") then
-	            tweenColor(guiObj, pinks.TextButton)
-	        end
-	    end
-	    for i, strokeObj in strokeObjects do
-	        tweenStrokeColor(strokeObj, pinks.UIStroke)
-	    end
+		local guiObjects, strokeObjects = getAllGuiObjectsAndStrokes(frame)
+		for i, guiObj in guiObjects do
+			if guiObj:IsA("TextBox") then
+				tweenColor(guiObj, pinks.TextBox)
+			elseif guiObj:IsA("TextLabel") then
+				tweenColor(guiObj, pinks.TextLabel)
+			elseif guiObj:IsA("Frame") then
+				tweenColor(guiObj, pinks.Frame)
+			elseif guiObj:IsA("TextButton") then
+				tweenColor(guiObj, pinks.TextButton)
+			end
+		end
+		for i, strokeObj in strokeObjects do
+			tweenStrokeColor(strokeObj, pinks.UIStroke)
+		end
 	end
-	
+
 	local function restoreColors()
-	    for guiObj, color in originalColors do
-	        tweenColor(guiObj, color)
-	    end
-	    for strokeObj, color in originalStrokeColors do
-	        tweenStrokeColor(strokeObj, color)
-	    end
+		for guiObj, color in originalColors do
+			tweenColor(guiObj, color)
+		end
+		for strokeObj, color in originalStrokeColors do
+			tweenStrokeColor(strokeObj, color)
+		end
 	end
-	
+
 	if parentFrame.Name == "LOL" then
-	    applyPinkThemeToFrameAndChildren(parentFrame)
+		applyPinkThemeToFrameAndChildren(parentFrame)
 	end
-	
+
 	saveOriginalColors()
-	
+
 	if cutecore then
-	    cutecore.MouseButton1Click:Connect(function()
-	        applyPinkThemeToFrameAndChildren(parentFrame)
-	        if super then
-	            super.Visible = true
-	        end
-	        if ann then
-	            ann.Visible = false
-	        end
-	    end)
+		cutecore.MouseButton1Click:Connect(function()
+			applyPinkThemeToFrameAndChildren(parentFrame)
+			if super then
+				super.Visible = true
+			end
+			if ann then
+				ann.Visible = false
+			end
+		end)
 	end
-	
+
 	if normal then
-	    normal.MouseButton1Click:Connect(function()
-	        if super then
-	            super.Visible = false
-	        end
-	        if ann then
-	            ann.Visible = true
-	        end
-	        restoreColors()
-	    end)
+		normal.MouseButton1Click:Connect(function()
+			if super then
+				super.Visible = false
+			end
+			if ann then
+				ann.Visible = true
+			end
+			restoreColors()
+		end)
 	end
-	
-	
+
+
 end;
 task.spawn(C_5);
 -- StarterGui.ScreenGui.SuperDuber.LocalScript
 local function C_6()
-local script = G2L["6"];
+	local script = G2L["6"];
 	local sound = script:FindFirstChild("Sound")
 	local devUserId = 8163040905
 	local client = game.Players.LocalPlayer
-	
+
 	local function Notify(title, msg, duration)
 		game.StarterGui:SetCore("SendNotification", {
 			Title = title,
@@ -964,8 +964,8 @@ local script = G2L["6"];
 			sound:Play()
 		end
 	end
-	
-	
+
+
 	game.Players.PlayerAdded:Connect(function(player)
 		if player.UserId == devUserId then
 			Notify("Alert", "Elysian Hub Developer Joined the game! " .. player.Name, 5)
@@ -978,26 +978,26 @@ local script = G2L["6"];
 			end
 		end
 	end)
-	
+
 	Notify("ElysianHub", "Welcome! Thanks For Using ElysianHub!!! " .. client.Name, 5)
-	
-	
+
+
 end;
 task.spawn(C_6);
 -- StarterGui.ScreenGui.SuperDuber.LocalScript
 local function C_8()
-local script = G2L["8"];
+	local script = G2L["8"];
 	local chat = game:GetService("Chat")
 	local char = game.Players.LocalPlayer.Character
-	
-	chat:Chat(char, "ElysianHub V3.5 loaded for "..game.Players.LocalPlayer.Name.." !!", Enum.ChatColor.White)
+
+	chat:Chat(char, "ElysianHub V3.5 beta loaded for "..game.Players.LocalPlayer.Name.." !!", Enum.ChatColor.White)
 end;
 task.spawn(C_8);
 -- StarterGui.ScreenGui.SuperDuber.TextBox.UIStroke.UIGradient.LocalScript
 local function C_d()
-local script = G2L["d"];
+	local script = G2L["d"];
 	local speed = 5
-	
+
 	while true do
 		wait(0.05)
 		script.Parent.Rotation += speed
@@ -1006,9 +1006,9 @@ end;
 task.spawn(C_d);
 -- StarterGui.ScreenGui.SuperDuber.Normal.UIStroke.UIGradient.LocalScript
 local function C_35()
-local script = G2L["35"];
+	local script = G2L["35"];
 	local speed = 5
-	
+
 	while true do
 		wait(0.05)
 		script.Parent.Rotation += speed
@@ -1017,9 +1017,9 @@ end;
 task.spawn(C_35);
 -- StarterGui.ScreenGui.SuperDuber.UIStroke.UIGradient.LocalScript
 local function C_38()
-local script = G2L["38"];
+	local script = G2L["38"];
 	local speed = 5
-	
+
 	while true do
 		wait(0.05)
 		script.Parent.Rotation += speed
@@ -1028,9 +1028,9 @@ end;
 task.spawn(C_38);
 -- StarterGui.ScreenGui.SuperDuber.CuteCore.UIStroke.UIGradient.LocalScript
 local function C_3d()
-local script = G2L["3d"];
+	local script = G2L["3d"];
 	local speed = 5
-	
+
 	while true do
 		wait(0.05)
 		script.Parent.Rotation += speed
