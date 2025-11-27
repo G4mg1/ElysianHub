@@ -8,7 +8,7 @@
 ]=]
 
 -- Instances: 66 | Scripts: 9 | Modules: 0 | Tags: 0
-local G2L = {};\
+local G2L = {};
 
 -- StarterGui.ScreenGui
 G2L["1"] = Instance.new("ScreenGui", game.CoreGui);
